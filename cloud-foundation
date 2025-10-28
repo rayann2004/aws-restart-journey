@@ -1,0 +1,171 @@
+-AWS re/Start – Cloud Foundations Notes
+
+This document summarizes all the key takeaways from the AWS re/Start Cloud Foundations module.
+
+---
+ 1. Servers, Data Centers, and Virtualization
+
+- A server is a computer that provides data or services to other computers.  
+- A data center is a physical location where an organization stores and operates its computer and networking equipment.  
+- Hardware virtualization allows you to create virtual machines (VMs) on a physical computer.  
+- Virtualization is a fundamental technology that enables cloud computing.
+
+---
+
+ 2. Software Development Life Cycle (SDLC)
+
+The phases of the SDLC are:
+
+| Phase | Description |
+|--------|--------------|
+| Plan | Define goals, requirements, and scope |
+| Analyze | Study system needs and constraints |
+| Design | Create architecture and detailed system design |
+| Develop | Write and build the actual software |
+| Test | Verify that the software works as expected |
+| Implement | Deploy the software to production |
+| Maintain | Monitor, update, and improve over time |
+
+---
+ 3. Roles in Software Development
+
+| Role | Responsibility |
+|------|----------------|
+| Project Manager | Oversees project planning, progress, and delivery |
+| Analyst | Defines and analyzes business or system requirements |
+| Quality Assurance | Tests the software to ensure quality |
+| Software Developer | Writes, maintains, and improves code |
+| Database Administrator | Manages and maintains databases |
+
+### Team Practices
+Effective teamwork in software development includes:
+- Clearly defining and communicating requirements  
+- Documenting the design  
+- Using version control systems
+
+---
+ 4. Cloud Computing Overview
+
+- Cloud computing is the on-demand delivery of IT resources through the internet with pay-as-you-go pricing.  
+- With cloud computing, you can manage your infrastructure as software.  
+- The three cloud service models are:
+  - Infrastructure as a Service (IaaS)
+  - Platform as a Service (PaaS)
+  - Software as a Service (SaaS)
+- The three deployment models are:
+  - Cloud
+  - Hybrid
+  - Private (on-premises)
+- Almost anything you can do in traditional IT can also be done using AWS cloud services.
+
+---
+
+ 5. Advantages of Cloud Computing
+
+| Advantage | Description |
+|------------|-------------|
+| Trade fixed expense for variable expense | Pay only for what you use |
+| Benefit from massive economies of scale | AWS lowers costs by operating at scale |
+| Reduce guessing about capacity | Scale up or down as needed |
+| Increase speed and agility | Launch resources in minutes |
+| Stop spending money on data centers | Focus on applications, not infrastructure |
+| Go global in minutes | Deploy resources anywhere around the world |
+
+---
+
+## 6. AWS Overview
+
+- AWS is a cloud services provider offering a wide range of global cloud-based products and solutions.  
+- AWS services are grouped into categories such as Compute, Storage, Networking, Databases, and more.  
+- Choose services based on business and technical requirements.  
+- You can interact with AWS in three ways:
+  - AWS Management Console
+  - AWS Command Line Interface (CLI)
+  - AWS Software Development Kits (SDKs)  
+- AWS documentation is the main resource for detailed help and examples.
+
+---
+
+7. AWS Pricing and Billing
+
+- You are not charged for:
+  - Inbound data transfer
+  - Data transfer between services within the same AWS Region
+- You pay only for what you use and can start or stop at any time.  
+- No long-term contracts are required.  
+- Some AWS services are free, but related resources may still incur costs.  
+- The Total Cost of Ownership (TCO) helps estimate direct and indirect system costs.  
+- The AWS Pricing Calculator can be used to estimate service costs.  
+
+ Examples of services with no direct charge:
+- Amazon VPC  
+- AWS Elastic Beanstalk  
+- AWS CloudFormation  
+- IAM  
+- Amazon EC2 Auto Scaling  
+- AWS OpsWorks  
+- Consolidated Billing  
+
+---
+ 8. AWS Global Infrastructure
+
+- The AWS Global Infrastructure consists of Regions and Availability Zones.  
+- Region selection depends on compliance, latency, and proximity to users.  
+- Each Availability Zone is physically separate, with redundant power, networking, and connectivity.  
+- Edge locations and regional edge caches improve performance by caching content closer to users.
+
+---
+ 9. AWS Service Categories
+
+- AWS provides a broad set of cloud-based services across multiple categories, including Compute, Networking, and Storage.  
+- The AWS Management Console provides a web interface to access and manage cloud resources.
+
+---
+ 10. Shared Responsibility Model
+
+| Responsibility | Managed By |
+|----------------|-------------|
+| Security of the Cloud | AWS (protects infrastructure, hardware, software, networking, and facilities) |
+| Security in the Cloud | Customer (configures security, updates OS, sets firewall and security groups) |
+
+For Infrastructure as a Service (IaaS) offerings, customers handle tasks like:
+- Guest operating system updates and security patches  
+- Configuring firewalls and security groups  
+
+---
+ 11. Amazon S3
+
+- Amazon S3 is a fully managed cloud storage service.  
+- Data is stored as objects inside buckets.  
+- There is virtually no limit on the number of objects stored.  
+- You pay only for the storage you use.  
+- Data can be accessed anytime, from anywhere, using a unique URL.
+
+---
+
+## 12. Amazon EC2
+
+- Amazon EC2 allows you to run Microsoft Windows and Linux virtual machines in the cloud.  
+- An Amazon Machine Image (AMI) provides the information needed to launch an instance.  
+- Instance types define CPU, memory, storage, and network performance characteristics.  
+- When launching an instance, you must specify:
+  - AMI  
+  - Instance type  
+  - Network, security, storage, and user data configurations  
+- EC2 pricing models include:
+  - On-Demand Instances  
+  - Reserved Instances  
+  - Spot Instances  
+  - Dedicated Hosts  
+
+---
+
+Summary
+
+This module introduced the foundations of cloud computing and AWS services, including:
+- Basic IT concepts such as servers, data centers, and virtualization  
+- The software development life cycle and team roles  
+- Cloud models and advantages  
+- AWS pricing, infrastructure, and shared responsibility  
+- Key AWS services: EC2 and S3  
+
