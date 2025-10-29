@@ -1,0 +1,27 @@
+In this document, I’m listing key concepts and commands I learned about Linux as part of the AWS re/Start program
+
+Overview
+-Linux is an open-source OS similar to Unix.
+-A distribution combines the Linux kernel with other software.
+-Most distros use Bash as the default shell.
+-Use man to read Linux manual pages.
+-User data is stored in /etc/passwd (user info) and /etc/shadow (passwords)
+-Daemons: Background processes that start at boot and provide services
+
+Common Commands
+| Command      | Purpose                 |
+| ------------ | ----------------------- |
+| `touch file` | Create or update a file |
+| `cat file`   | View file content       |
+| `ls`         | List directory contents |
+| `history`    | Show previous commands  |
+| `whoami`     | Show current user       |
+| `hostname`   | Show device name        |
+
+I/O Streams
+| Stream | ID | Use    | Example                         |
+| ------ | -- | ------ | ------------------------------- |
+| stdin  | 0  | Input  | `cat 0<file.txt`                |
+| stdout | 1  | Output | `ls 1>out.txt`                  |
+| stderr | 2  | Errors | `find / -name "*" 2>errors.txt` |
+
