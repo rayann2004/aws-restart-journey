@@ -1,27 +1,55 @@
-In this document, I’m listing key concepts and commands I learned about Linux as part of the AWS re/Start program
+# AWS re/Start – Linux Fundamentals Notes
 
-Overview
--Linux is an open-source OS similar to Unix.
--A distribution combines the Linux kernel with other software.
--Most distros use Bash as the default shell.
--Use man to read Linux manual pages.
--User data is stored in /etc/passwd (user info) and /etc/shadow (passwords)
--Daemons: Background processes that start at boot and provide services
+In this document, I’m listing key concepts and commands I learned about **Linux** as part of the **AWS re/Start program**.  
 
-Common Commands
-| Command      | Purpose                 |
-| ------------ | ----------------------- |
-| `touch file` | Create or update a file |
-| `cat file`   | View file content       |
-| `ls`         | List directory contents |
-| `history`    | Show previous commands  |
-| `whoami`     | Show current user       |
-| `hostname`   | Show device name        |
+# Overview
+# Linux is an open-source OS similar to Unix.
+# A distribution combines the Linux kernel with other software.
+# Most distros use Bash as the default shell.
+# Use 'man' to read command manuals.
+# User data: /etc/passwd (user info) and /etc/shadow (passwords)
+# Daemons are background services that start at boot.
+# Login scripts: ~/.bash_profile, ~/.bashrc, ~/.bash_history
+# Root user (UID 0) has full control. Linux is case-sensitive.
+# Use TAB for auto-completion.
 
-I/O Streams
-| Stream | ID | Use    | Example                         |
-| ------ | -- | ------ | ------------------------------- |
-| stdin  | 0  | Input  | `cat 0<file.txt`                |
-| stdout | 1  | Output | `ls 1>out.txt`                  |
-| stderr | 2  | Errors | `find / -name "*" 2>errors.txt` |
+# Common Commands
+pwd                 # Print working directory
+ls                  # List files and directories
+cd                  # Change directory
+touch file          # Create or update a file
+cat file            # Show file contents
+whoami              # Show current user
+hostname            # Show system name
+history             # Show previously used commands
+sudo apt update     # Update package lists
+sudo apt install pkg# Install new software
+clear               # Clear terminal screen
+exit                # Close session or logout
+
+# Users & Permissions
+# Users and groups control access to system files.
+# Root user has all permissions.
+su user             # Switch user
+su -                # Switch to root
+sudo command        # Run one command as root
+AM is an AWS service that is used to manage users and access to resources.
+
+
+# Editing Files
+vim file            # Open file with Vim
+# i = insert mode | Esc + :wq = save & quit | :q! = quit w/o saving
+
+nano file           # Open file with Nano
+# Ctrl+O = Save | Ctrl+X = Exit
+
+# gedit:A GUI application for editing files
+
+# I/O Streams
+# stdin (0): Input | stdout (1): Output | stderr (2): Errors
+cat 0<file.txt
+ls 1>out.txt
+find / -name "*" 2>errors.txt
+
+
 
