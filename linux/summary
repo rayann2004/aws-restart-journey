@@ -51,5 +51,18 @@ cat 0<file.txt
 ls 1>out.txt
 find / -name "*" 2>errors.txt
 
+File Permissions
+| #     | Topic                          | Key Concept                                                                                                                     | Command Example                                          | Numeric Code | Quick Notes                                                                                                          |
+| ----- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------- |
+| **1** | **File Permissions**           | Every file/dir has permissions for **user (u)**, **group (g)**, **others (o)** → each with **read (r), write (w), execute (x)** | `ls -l` → `drwxr-xr-x`                                   | —            | `r=4`, `w=2`, `x=1`; dirs need `x` to enter                                                                          |
+| **2** | **Modifying Permissions**      | Change access rights using **chmod** (symbolic or numeric)                                                                      | `chmod u+x myfile` or `chmod 755 myfile`                 | e.g. `755`   | Symbolic: `u,g,o,a` ; Numeric: add bits (`r=4,w=2,x=1`)                                                              |
+| **3** | **Ownership**                  | Files have an **owner (user)** and a **group**                                                                                  | `sudo chown patty myfile` <br>`sudo chgrp whales myfile` | —            | Combine both: `sudo chown patty:whales myfile`                                                                       |
+| **4** | **Umask**                      | Sets **default permission mask** for new files (removes rights)                                                                 | `umask 022`                                              | —            | Default 022 → no write for group/others                                                                              |
+| **5** | **SUID (Set User ID)**         | Run file **as the file owner** (often root)                                                                                     | `chmod u+s myfile` or `chmod 4755 myfile`                | `4`          | Lets normal users run program temporarily as root (e.g. `passwd`)                                                    |
+| **6** | **SGID (Set Group ID)**        | Run file **as the file’s group**                                                                                                | `chmod g+s myfile` or `chmod 2555 myfile`                | `2`          | Also, files created in SGID dir inherit its group                                                                    |
+| **7** | **Process Permissions (UIDs)** | Each process has **real UID**, **effective UID**, **saved UID**                                                                 | —                                                        | —            | `RUID` = who started it, `EUID` = current privilege, `SUID` = stored switch; prevents abuse of temporary root access |
+| **8** | **Sticky Bit**                 | On a directory, only **file owner**, **dir owner**, or **root** can delete/rename files                                         | `chmod +t mydir` or `chmod 1755 mydir`                   | `1`          | Used on `/tmp` (`rwxrwxrwt`) to protect user files in shared dirs                                                    |
+
+
 
 
