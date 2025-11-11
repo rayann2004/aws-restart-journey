@@ -1,0 +1,86 @@
+
+
+AWS Networking Fundamentals — Summary
+
+This document summarizes the key concepts from the AWS Networking module, covering LANs, WANs, VPC, IP addressing, subnetting, wireless technologies, and key network tools.
+
+---
+
+## Network Basics
+
+1. **LAN (Local Area Network):** Connects devices in a small geographical area, such as an office or campus.
+2. **WAN (Wide Area Network):** Connects devices across large geographical areas, such as between cities or countries.
+
+---
+
+## Network Management Models
+
+1. Client–Server:Centralized management where clients request resources from a server.
+2. Peer-to-Peer (P2P):Each device acts as both client and server, allowing direct sharing.
+
+---
+
+## Network Topology
+
+Describes how nodes are connected.
+Examples:Star and Hybrid topologies.
+
+---
+
+## Amazon VPC (Virtual Private Cloud)
+
+A VPCis a customizable virtual network in the AWS Cloud that operates like a traditional on-premises network, but with the scalability and flexibility of AWS.
+
+Key Components:
+
+1. CIDR Block: Defines the IP address range for the VPC.
+2. Internet Gateway (IGW): Enables internet access for public subnets.
+3. NAT Gateway: Allows private subnets to access the internet securely.
+4. Route Table: Controls traffic flow between subnets and the internet.
+5. Subnets: Divide the VPC into public and private zones.
+6. Security Groups: Act as virtual firewalls for instances.
+7. Network ACLs: Provide subnet-level traffic control.
+
+---
+
+## IP Addressing and Subnetting
+
+1. IP Address: Uniquely identifies a device on a network.
+2. IPv4 Format: Four octets (0–255) separated by dots (e.g., `192.168.1.1`).
+3. Port Number: Identifies a specific application or service on a device (e.g., port `80` for HTTP).
+4. Subnet: Divides a large network into smaller, manageable networks to improve performance and security.
+5. Subnet Mask: Splits an IP address into network and host parts (four 8-bit octets).
+6. CIDR (Classless Inter-Domain Routing):** Uses suffixes (e.g., `/24`) to define subnet size and enable flexible addressing.
+7. Communication Rules: Devices in the same subnet communicate directly; devices in different subnets require routing.
+
+---
+
+## Wireless and IoT Networking
+
+1. WEP: Adds basic encryption for wireless networks.
+2. WPA: Improves key handling and user authorization.
+3. BLE (Bluetooth Low Energy): Used in mobile and IoT applications.
+4. IoT (Internet of Things): Physical devices connected to the internet for data exchange.
+5. IoT Connectivity Options:
+
+    Wi-Fi or Broadband Internet
+    Broadband Cellular Data
+    Narrow-band Cellular Data
+    LoRaWAN
+6. AWS IoT Core: Allows IoT devices to securely communicate with AWS services.
+7. Amazon WorkSpaces: Cloud-based virtual desktops (Windows or Linux).
+
+---
+
+## Tools and Utilities to Practice
+
+| Tool              | Purpose                                       |
+| ----------------- | --------------------------------------------- |
+| ping              | Test reachability between devices             |
+| nslookup          | Query DNS records                             |
+| traceroute        | Trace network paths                           |
+| AWS Console / CLI | Create and manage VPCs, subnets, and gateways |
+| Wireshark         | Capture and analyze network traffic           |
+
+---
+
