@@ -6,3 +6,6 @@ This module covered the fundamentals of cloud computing, AWS global infrastructu
 
 Module 2 – Linux
 This module introduced Linux as the foundation for AWS environments and cloud servers.
+
+Module 3 – Networking
+This module introduced fundamental networking concepts and how they apply within AWS.
