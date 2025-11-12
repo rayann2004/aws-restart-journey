@@ -1,0 +1,34 @@
+Documenting lab tasks, observations, and conclusions for the model’s labs.
+
+------------------------------------------------------------------
+261-[NF]-Lab - Public and Private IP addresses
+
+Lab Tasks Completed:
+Verified EC2 instances’ private and public IPs
+Connected to public instance via SSH
+Troubleshot Internet connectivity using AWS console and network rules
+Explained why public IPs and Internet Gateway are necessary for Internet access
+
+Conclusion:
+Public subnet = route to Internet Gateway
+Private subnet = no direct Internet access; uses NAT for outbound
+Private IPs cannot reach Internet without a public IP or NAT
+Use RFC1918 private ranges for all VPCs
+
+-----------------------------------------------------------------
+262-[NF]-Lab – Static and Dynamic IP Addresses
+
+Lab Tasks Completed:
+Investigated the customer’s EC2 instance with a dynamically changing public IP
+Launched a test EC2 instance to replicate the issue
+Observed that stopping and starting the instance changes its public IP (dynamic), while the private IP remains constant
+Allocated and associated an Elastic IP (EIP) to the test instance to create a persistent (static) public IP
+Verified that the static IP persists across instance stops and starts
+Conclusion:
+Dynamic public IPs change every time an instance is stopped and started
+Private IPs remain constant within the VPC unless manually changed
+Elastic IPs (EIP) provide a static, persistent public IP for instances
+Assigning an EIP solves the customer’s issue of IP instability
+Use Elastic IPs for instances that require a stable public address
+
+----------------------------------------------------------------------
