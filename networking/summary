@@ -52,6 +52,12 @@ Key Components:
 5. Subnet Mask: Splits an IP address into network and host parts (four 8-bit octets).
 6. CIDR (Classless Inter-Domain Routing):** Uses suffixes (e.g., `/24`) to define subnet size and enable flexible addressing.
 7. Communication Rules: Devices in the same subnet communicate directly; devices in different subnets require routing.
+ note:Subnet Size Rule (Quick Reference):
+ Use formula: Total IPs = 2^(32 − subnet mask)
+ Pick the smallest subnet mask where Total IPs ≥ number of hosts needed
+ AWS reserves 5 IPs per subnet → usable IPs = Total IPs − 5
+ Shortcut: Find the nearest power of 2 ≥ required hosts
+ Example: Need ~15,000 IPs → /18 subnet (2^(32−18)=16,384 total IPs)
 
 ---
 
