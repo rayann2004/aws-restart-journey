@@ -32,3 +32,17 @@ Assigning an EIP solves the customer’s issue of IP instability
 Use Elastic IPs for instances that require a stable public address
 
 ----------------------------------------------------------------------
+263-[NF]-Lab – Create Subnets and Allocate IP Addresses in an Amazon VPC
+
+Lab Tasks Completed:
+
+Launched the VPC Wizard in AWS and created a VPC: 192.168.0.0/18.
+Created a public subnet: 192.168.1.0/26.
+Verified the VPC and subnet in Your VPCs.
+Explained public vs. private subnets: public → Internet access, private → internal only.
+Conclusion:
+Public subnets require an Internet Gateway to reach the Internet.
+Private IPs are for internal communication within the VPC.
+Proper CIDR planning ensures enough IPs for resources.
+
+
