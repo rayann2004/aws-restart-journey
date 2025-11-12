@@ -29,7 +29,8 @@ Examples:Star and Hybrid topologies.
 
 ## Amazon VPC (Virtual Private Cloud)
 
-A VPCis a customizable virtual network in the AWS Cloud that operates like a traditional on-premises network, but with the scalability and flexibility of AWS.
+A VPC (Virtual Private Cloud) functions like a cloud-based data center that is logically separated from other networks. You can launch and manage AWS resources within it quickly.
+Devices within a VPC communicate using private IP addresses.To connect to the internet, an instance requires a public IP address, along with network resources like an Internet Gateway and a route table.
 
 Key Components:
 
