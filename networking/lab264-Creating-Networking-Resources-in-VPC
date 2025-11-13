@@ -1,5 +1,6 @@
 ![Ping test result](https://github.com/rayann2004/aws-restart-journey/blob/main/networking/image.png?raw=true)
-
+Objective
+Build a fully routable network inside AWS by creating all required networking components and verifying connectivity via ping.
 
 1. Created the VP)
    - Name: `Test VPC`
