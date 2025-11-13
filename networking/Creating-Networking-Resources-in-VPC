@@ -1,6 +1,7 @@
-(aws-restart-journey/networking/image.png)
+![Ping test result](https://github.com/rayann2004/aws-restart-journey/blob/main/networking/image.png?raw=true)
 
-1. Created the VPC
+
+1. Created the VP)
    - Name: `Test VPC`
    -IPv4 CIDR: `192.168.0.0/18`
 
