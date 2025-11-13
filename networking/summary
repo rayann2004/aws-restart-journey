@@ -42,6 +42,15 @@ Key Components:
 6. Security Groups: Act as virtual firewalls for instances.
 7. Network ACLs: Provide subnet-level traffic control.
 
+ | Feature              | Security Group                        | NACL                                               |
+| -------------------- | ------------------------------------- | -------------------------------------------------- |
+| Level                | Instance                              | Subnet                                             |
+| Stateful / Stateless | Stateful                              | Stateless                                          |
+| Default Behavior     | All inbound blocked, outbound allowed | Default NACL: all allowed; Custom NACL: all denied |
+| Rules Type           | Allow only                            | Allow and Deny                                     |
+| Evaluation           | All rules                             | In order by number                                 |
+| Common Use           | Control traffic to specific instances | Control traffic at subnet boundaries               |
+
 ---
 
 ## IP Addressing and Subnetting
