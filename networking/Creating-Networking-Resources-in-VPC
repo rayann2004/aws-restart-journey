@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/rayann2004/aws-restart-journey/main/networking/image.png" width="500" alt="Ping test result">
-</p>
-
-
+![Ping test result](https://raw.githubusercontent.com/rayann2004/aws-restart-journey/main/networking/image.png)
 
 1. Created the VP)
    - Name: `Test VPC`
