@@ -1,0 +1,52 @@
+
+1. Created the VPC
+   - Name: `Test VPC`
+   -IPv4 CIDR: `192.168.0.0/18`
+
+2. Created a Public Subnet
+   - Name: `Public Subnet`
+   -IPv4 CIDR: `192.168.1.0/26`
+   - Associated it with the Test VPC.
+
+3. Created a Route Table
+   - Name: `Public Route Table`
+   - Associated it with the `Public Subnet`.
+   - Added route:
+     - Destination: `0.0.0.0/0`
+     - Target: Internet Gateway (IGW)
+
+4. Created and Attached an Internet Gateway
+   - Name: `IGW-Test-VPC`
+   - Attached it to the `Test VPC`.
+
+5. Configured Network ACL
+   - Name: `Public Subnet NACL`
+   - Inbound Rule: Allow all traffic (`0.0.0.0/0`)
+   - Outbound Rule: Allow all traffic (`0.0.0.0/0`)
+
+6. Configured Security Group
+
+   -Name: `Public Security Group`
+   - Description: Allows public access
+   -Inbound Rules:
+     - SSH (22) → Anywhere
+     - HTTP (80) → Anywhere
+     - HTTPS (443) → Anywhere
+   -Outbound: All traffic allowed
+
+7. Launched EC2 Instance
+
+   - AMI: Amazon Linux 2023
+   - Type: `t3.micro`
+   - Subnet: Public Subnet
+   - Auto-assign Public IP: Enabled
+   - Security Group: Public Security Group
+   - Key Pair: `vockey`
+
+8. Connected via SSH
+9. Tested Internet Connectivity
+   ping google.com
+
+   Successful replies received — internet access confirmed.
+
+
