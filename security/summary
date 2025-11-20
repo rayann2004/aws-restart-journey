@@ -1,0 +1,68 @@
+
+AWS Security Module — 
+
+ 1. What Is Security?
+
+Security means protecting valuable assets such as systems, data, and networks.
+
+ CIA Triad (Core Security Principles)
+* Confidentiality – Only authorized users can access data.
+* Integrity – Data remains accurate and unaltered.
+* Availability – Systems and data remain accessible.
+
+ Common Security Threats
+* Malware
+* Phishing
+* Social Engineering
+
+ Security Controls
+* Physical – locks, cameras, datacenter guards
+* Administrative – policies, training
+* Technical – firewalls, encryption, IAM
+
+ Security Lifecycle
+1. Prevention
+2. Detection
+3. Response
+4. Analysis
+
+
+ 2. Prevention Phase 
+
+Prevention aims to stop threats before they occur.
+
+Three Main Tasks
+1. Identify assets that must be protected.
+2. Assess vulnerabilities in those assets.
+3. Implement countermeasures to reduce risk.
+
+ Layers of a Strong Prevention Strategy
+* Network hardening
+* System hardening
+* Data security controls
+* Identity management
+
+
+3. Network Hardening
+
+Network hardening protects the network infrastructure through configuration and design.
+
+ Common Network Threats
+* Network mapping
+* Port scanning
+* Traffic sniffing
+
+ Network Hardening Techniques
+* Disable unused protocols and secure weak ones (especially discovery protocols).
+* Limit remote administrative access.
+* Use AAA (Authentication, Authorization, Accounting).
+* Use firewalls close to the traffic source.
+* Segment the network into subnets.
+
+ AWS Network Hardening Tools
+* Security Groups – instance-level firewalls
+* Network ACLs – subnet-level firewalls
+
+Amazon Inspector 
+Amazon Inspector automatically scans AWS resources (Lambda, EC2, ECR) for vulnerabilities and outdated packages.
+It reports security issues with severity levels and gives clear remediation steps. After you fix the issue, it rescans and marks the finding as resolved.
