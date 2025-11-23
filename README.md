@@ -1,5 +1,5 @@
 This repo is where I’m documenting everything I learn in the AWS re/Start program  from cloud basics to the AWS core services.  
-It’s mainly for myself to track progress, practice commands, and have one place for all my notes and labs.
+It’s mainly for myself to track progress, practice commands, and have one place for all my notes.
 
 Module 1 – Cloud Foundations
 This module covered the fundamentals of cloud computing, AWS global infrastructure, pricing, and the shared responsibility model.
