@@ -79,9 +79,9 @@ In AWS, firewalls are implemented using **security groups** and **network ACLs**
 System hardening reduces the number of vulnerabilities a system exposes.
 Effective techniques include:
 
-* Establishing a **security baseline**
+* Establishing a **security baseline** (A defined standard configuration that ensures consistent and secure system settings.)
 * Disabling unnecessary services
-* Applying patches regularly
+* Applying patches regularly (Keeping the system updated to fix known vulnerabilities.)
 
 Hardening must strike a balance between **security** and **system usability**.
 
@@ -95,6 +95,10 @@ Hardening must strike a balance between **security** and **system usability**.
   * Hybrid encryption is widely used in TLS/SSL
 
 * **Hashing** protects **data integrity**
+   Verify that data has not been altered
+   Compare the original hash with a newly generated hash.
+   If they match → the data is intact.
+   If they don’t → the data has been modified or corrupted.
 
 * **Permissions** define *who* can access a resource and *how* it can be accessed
 
