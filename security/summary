@@ -165,6 +165,8 @@ It provides visibility into:
 
 Because everything in AWS is recorded as an event, CloudTrail helps with **governance, compliance, and auditing**.
 
+CloudTrail = Logs all activity. GuardDuty = Analyzes those logs to detect attacks.
+
 ---
 
 ## 11. AWS Config
@@ -194,6 +196,12 @@ Effective security incidents follow three steps:
 
 A **Business Continuity Plan (BCP)** and **Disaster Recovery Plan (DRP)** define how to **prevent outages** and **recover quickly**.
 AWS provides services and guidance to support disaster recovery in cloud environments.
+
+| Concept | What it means                                 | Focus      |
+| ------- | --------------------------------------------- | ---------- |
+| **BCP** | Keep the business running **during** disaster | Continuity |
+| **DRP** | Recover systems **after** disaster            | Recovery   |
+
 
 ---
 
