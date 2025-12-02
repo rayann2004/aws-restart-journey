@@ -143,9 +143,14 @@ IAM allows you to:
 * **Intrusion Detection Systems (IDS)** generate alerts for security threats
 
   * Signature-based or anomaly-based detection
-  * Types: Network-based IDS and Host-based IDS
+   Signature-based detection — matches activity to known attack patterns
+   Anomaly-based detection — identifies behavior that deviates from normal activity
 
-In AWS, **Amazon GuardDuty** continuously monitors your account and detects threats.
+  *IDS types:
+    Network-based IDS (NIDS) — monitors network traffic
+    Host-based IDS (HIDS) — monitors activity on individual devices or servers
+
+In AWS, Amazon GuardDuty continuously monitors your AWS account, workloads, and data, and provides ongoing threat detection.
 
 ---
 
