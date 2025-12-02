@@ -1,68 +1,258 @@
+# AWS Security –
 
-AWS Security Module — 
+## 1. Introduction to Security
 
- 1. What Is Security?
+Security is the practice of **protecting valuable assets**.
+Effective information security is built on three core principles:
 
-Security means protecting valuable assets such as systems, data, and networks.
+* **Confidentiality** – keeping information private and accessible only to authorized users
+* **Integrity** – ensuring information is accurate and unaltered
+* **Availability** – ensuring information and systems are accessible when needed
 
- CIA Triad (Core Security Principles)
-* Confidentiality – Only authorized users can access data.
-* Integrity – Data remains accurate and unaltered.
-* Availability – Systems and data remain accessible.
+Common security issues include **malware, phishing, and social engineering**.
+Strong security relies on implementing **security controls across the entire security lifecycle**, and in cloud environments, defining shared **security responsibilities**.
+Security controls can be **physical**, **administrative**, or **technical**.
 
- Common Security Threats
-* Malware
-* Phishing
-* Social Engineering
+The **security lifecycle** includes:
 
- Security Controls
-* Physical – locks, cameras, datacenter guards
-* Administrative – policies, training
-* Technical – firewalls, encryption, IAM
-
- Security Lifecycle
 1. Prevention
 2. Detection
 3. Response
 4. Analysis
 
+---
 
- 2. Prevention Phase 
+## 2. Acceptable Use Policies
 
-Prevention aims to stop threats before they occur.
+Acceptable Use Policies define how users can and cannot use a company’s services and websites.
+They prohibit activities such as:
 
-Three Main Tasks
-1. Identify assets that must be protected.
-2. Assess vulnerabilities in those assets.
-3. Implement countermeasures to reduce risk.
+* Illegal or fraudulent behavior
+* Actions that harm the security or availability of systems
+* Sending unsolicited bulk messages (“spam”)
 
- Layers of a Strong Prevention Strategy
+Organizations may investigate policy violations, disable access to harmful content, and expect users to cooperate. Reports of violations follow a defined abuse-reporting process.
+
+---
+
+## 3. Prevention Phase
+
+Preventive measures aim to **stop threats before they occur**.
+This phase includes three major tasks:
+
+1. **Identify assets** that need protection
+2. **Assess vulnerabilities** affecting those assets
+3. **Implement countermeasures**
+
+A strong prevention strategy uses **multiple layers of defense**, including:
+
 * Network hardening
 * System hardening
 * Data security controls
 * Identity management
 
+---
 
-3. Network Hardening
+## 4. Network Hardening
 
-Network hardening protects the network infrastructure through configuration and design.
+Network hardening uses configuration and architectural best practices to protect infrastructure.
+Common network threats include:
 
- Common Network Threats
-* Network mapping
+* Network mapping(the process of discovering and visualizing the devices, hosts, and connections that exist within a network.)
 * Port scanning
 * Traffic sniffing
 
- Network Hardening Techniques
-* Disable unused protocols and secure weak ones (especially discovery protocols).
-* Limit remote administrative access.
-* Use AAA (Authentication, Authorization, Accounting).
-* Use firewalls close to the traffic source.
-* Segment the network into subnets.
+Key hardening techniques:
 
- AWS Network Hardening Tools
-* Security Groups – instance-level firewalls
-* Network ACLs – subnet-level firewalls
+* Disable unused or vulnerable protocols, especially discovery protocols
+* Limit remote administrative access
+* Implement AAA (authentication, authorization, accounting)
+* Use firewalls to filter traffic at the source
+* Segment networks into subnets
 
-Amazon Inspector 
-Amazon Inspector automatically scans AWS resources (Lambda, EC2, ECR) for vulnerabilities and outdated packages.
-It reports security issues with severity levels and gives clear remediation steps. After you fix the issue, it rescans and marks the finding as resolved.
+In AWS, firewalls are implemented using **security groups** and **network ACLs**.
+
+---
+
+## 5. System Hardening
+
+System hardening reduces the number of vulnerabilities a system exposes.
+Effective techniques include:
+
+* Establishing a **security baseline**
+* Disabling unnecessary services
+* Applying patches regularly
+
+Hardening must strike a balance between **security** and **system usability**.
+
+---
+
+## 6. Data Protection: Encryption, Hashing & Permissions
+
+* **Encryption** protects **confidentiality**
+
+  * Types: symmetric, asymmetric, and hybrid
+  * Hybrid encryption is widely used in TLS/SSL
+
+* **Hashing** protects **data integrity**
+
+* **Permissions** define *who* can access a resource and *how* it can be accessed
+
+  * Implemented using **ACLs** or **role-based access models**
+
+---
+
+## 7. Public Key Infrastructure (PKI)
+
+PKI provides the principles and components needed to secure resources using **keys and digital certificates**.
+
+Key parts:
+
+* A **digital certificate** represents the online identity of a user, system, or entity
+* A **Certificate Authority (CA)** issues and signs certificates and manages trust
+* Certificates can be **self-signed** or **CA-signed**
+
+---
+
+## 8. Identity and Access Management (IAM)
+
+IAM helps securely control access to AWS resources.
+
+IAM credentials include:
+
+* Email and password
+* IAM username and password
+* Access key + secret key
+* MFA
+* Key pairs
+
+IAM allows you to:
+
+* Create **users**, **groups**, and **roles**
+* Use roles to define **permissions** for AWS resources
+
+---
+
+## 9. Malware & Intrusion Detection
+
+* **Antivirus software** detects, prevents, and removes malware using signature databases
+* **Intrusion Detection Systems (IDS)** generate alerts for security threats
+
+  * Signature-based or anomaly-based detection
+  * Types: Network-based IDS and Host-based IDS
+
+In AWS, **Amazon GuardDuty** continuously monitors your account and detects threats.
+
+---
+
+## 10. AWS CloudTrail
+
+CloudTrail records all activity across Regions in an AWS account.
+It provides visibility into:
+
+* Who did what
+* When actions occurred
+* Which resources were affected
+
+Because everything in AWS is recorded as an event, CloudTrail helps with **governance, compliance, and auditing**.
+
+---
+
+## 11. AWS Config
+
+AWS Config tracks configuration changes across AWS resources.
+It helps you:
+
+* Answer configuration-related questions
+* Demonstrate compliance
+* Detect and troubleshoot vulnerabilities
+
+You can also:
+
+* Define **Config rules** to enforce best practices
+* Receive notifications when resources are created, modified, or deleted
+* View relationships between resources
+
+---
+
+## 12. Incident Response, BCP & DRP
+
+Effective security incidents follow three steps:
+
+1. Planning
+2. Investigating
+3. Remediating
+
+A **Business Continuity Plan (BCP)** and **Disaster Recovery Plan (DRP)** define how to **prevent outages** and **recover quickly**.
+AWS provides services and guidance to support disaster recovery in cloud environments.
+
+---
+
+## 13. Security Analysis
+
+Security analysis strengthens security controls.
+Core activities include:
+
+* **Testing**
+* **Monitoring**
+* **Logging**
+
+Policies define:
+
+* What is monitored
+* Who performs it
+* When and how monitoring occurs
+* What is logged and how logs are managed
+
+---
+
+## 14. AWS Trusted Advisor
+
+Trusted Advisor provides real-time recommendations for security, cost, performance, and reliability.
+
+Security checks include:
+
+* Detecting security groups with overly open ports
+* Reviewing IAM permissions usage
+* Warning if MFA is missing on the root account
+* Ensuring S3 buckets are not publicly accessible
+
+---
+
+## 15. AWS Root User Security
+
+The AWS root user has full administrator access.
+
+Best practices:
+
+* Never share root credentials
+* Delete root user access keys
+* Create an IAM user for every individual
+* Always enable MFA
+* Enable CloudTrail and billing logs for visibility and cost tracking
+
+---
+
+## 16. AWS Compliance
+
+AWS helps customers understand the security controls in place inside the cloud.
+Compliance is shared:
+
+* AWS secures the cloud infrastructure
+* Customers secure what they build on top of it
+
+AWS supports many global security standards and certifications to help organizations meet regulatory requirements.
+
+---
+
+## 17. AWS Security Resources
+
+Security resources include:
+
+* AWS account teams
+* AWS Support plans
+* AWS Professional Services & AWS Partner Network
+* AWS security advisories and bulletins
+* AWS Auditor Learning Path
+
+---
