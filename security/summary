@@ -225,7 +225,19 @@ Policies define:
 
 ## 14. AWS Trusted Advisor
 
-Trusted Advisor provides real-time recommendations for security, cost, performance, and reliability.
+1. Trusted Advisor Categories
+Trusted Advisor provides checks in five categories:
+Cost Optimization
+Performance
+Security
+Fault Tolerance
+Service Limits
+
+Check Statuses
+Each check can return one of three statuses:
+Red: Action recommended
+Yellow: Investigation recommended
+Green: No problems detected
 
 Security checks include:
 
@@ -234,6 +246,14 @@ Security checks include:
 * Warning if MFA is missing on the root account
 * Ensuring S3 buckets are not publicly accessible
 
+3. Security Checks (Free for Customers)
+Some Trusted Advisor security checks available at no cost include:
+IAM usage
+MFA enabled on root account
+Security groups with unrestricted ports
+S3 bucket permissions
+Amazon EBS public snapshots
+Amazon RDS public snapshots
 ---
 
 ## 15. AWS Root User Security
