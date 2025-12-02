@@ -2,8 +2,7 @@
 
 ## 1. Introduction to Security
 
-Security is the practice of **protecting valuable assets**.
-Effective information security is built on three core principles:
+Three core principles:
 
 * **Confidentiality** – keeping information private and accessible only to authorized users
 * **Integrity** – ensuring information is accurate and unaltered
@@ -25,14 +24,6 @@ The **security lifecycle** includes:
 ## 2. Acceptable Use Policies
 
 Acceptable Use Policies define how users can and cannot use a company’s services and websites.
-They prohibit activities such as:
-
-* Illegal or fraudulent behavior
-* Actions that harm the security or availability of systems
-* Sending unsolicited bulk messages (“spam”)
-
-Organizations may investigate policy violations, disable access to harmful content, and expect users to cooperate. Reports of violations follow a defined abuse-reporting process.
-
 ---
 
 ## 3. Prevention Phase
