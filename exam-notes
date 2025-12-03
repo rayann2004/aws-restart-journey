@@ -8,7 +8,11 @@ This document contains direct, exam-focused information for AWS services and con
 3-CloudTrail – Logs all API calls and actions in your AWS account, providing audit, compliance, and security tracking.
 4-MFA (Multi-Factor Authentication) – Adds a second authentication factor (e.g., code from app or SMS) to secure AWS accounts, especially the root user.
 5-Poll – Mechanism for checking a resource repeatedly to detect changes or receive messages (commonly used with SQS or Lambda triggers).
+6-AWS Compute Optimizer
+Concept: Rightsizing
+Purpose: Recommends optimal EC2 instance types and sizes based on utilization metrics
 
+Exam Trigger: “Analyze utilization to recommend optimal resources” → Rightsizing
 | Billing Model                       | Explanation                                                  | Best Use Case / Notes                                                                                          |
 | ----------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
 | **On-Demand Instances**             | Pay only for the compute you use per hour or second          | Ideal for **intermittent or unpredictable workloads**; most cost-effective for weekly/monthly reports          |
