@@ -1,0 +1,24 @@
+AWS Exam Quick Reference – Intro
+This document contains direct, exam-focused information for AWS services and concepts
+
+-Focused Definitions
+
+1-Lambda – Serverless compute service that runs your code without managing servers, triggered by events (e.g., S3 upload, API call).
+2-SNS (Simple Notification Service) – Pub/Sub messaging service that sends notifications to multiple subscribers (email, SMS, Lambda, SQS) simultaneously.
+3-CloudTrail – Logs all API calls and actions in your AWS account, providing audit, compliance, and security tracking.
+4-MFA (Multi-Factor Authentication) – Adds a second authentication factor (e.g., code from app or SMS) to secure AWS accounts, especially the root user.
+5-Poll – Mechanism for checking a resource repeatedly to detect changes or receive messages (commonly used with SQS or Lambda triggers).
+
+| Billing Model                       | Explanation                                                  | Best Use Case / Notes                                                                                          |
+| ----------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| **On-Demand Instances**             | Pay only for the compute you use per hour or second          | Ideal for **intermittent or unpredictable workloads**; most cost-effective for weekly/monthly reports          |
+| **Standard Reserved Instances**     | Commit 1–3 years for discounted hourly rates                 | Best for **long-term, consistent workloads**; **not suitable** for short-term/intermittent tasks               |
+| **Convertible Reserved Instances**  | Offers discounts and allows **changing instance attributes** | Useful for predictable workloads that may need different instance types; **not suitable** for occasional tasks |
+| **On-Demand Capacity Reservations** | Guarantees capacity in a specific AZ for a fixed time        | Ensures availability for **critical workloads**; not ideal for infrequent, short-term jobs                     |
+
+
+AWS Shared Responsibility Model
+| Responsibility            | Who      | Examples                                                                               |
+| ------------------------- | -------- | -------------------------------------------------------------------------------------- |
+| **Security of the Cloud** | AWS      | Physical data centers, hardware, network, hypervisors, managed services infrastructure |
+| **Security in the Cloud** | Customer | Data, applications, OS (EC2), IAM, network configuration, client-side encryption       |
